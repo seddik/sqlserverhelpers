@@ -5,8 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SqlServerHelpers"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Serveur"  VerticalAlignment="Center" Margin="5"/>
+            <ComboBox IsEditable="True" x:Name="t_server" Width="120" VerticalAlignment="Center" Margin="5" Text="."/>
+            <Button Content="Network" VerticalAlignment="Center" Margin="5" x:Name="b_network"/>
+            <TextBox x:Name="t_instance" VerticalAlignment="Center" Margin="5" Width="100" Text="SQLEXPRESS"/>
+            <TextBox x:Name="t_user" VerticalAlignment="Center" Margin="5" Width="100" Text="sa"/>
+            <PasswordBox x:Name="t_password" VerticalAlignment="Center" Margin="5" Width="100" Password=""/>
+            <Button Content="Connect" VerticalAlignment="Center" Margin="5" x:Name="b_test"/>
+            <ComboBox x:Name="t_databases" VerticalAlignment="Center" Margin="5" Width="150"/>
+        </StackPanel>
+    </StackPanel>
 </Window>
